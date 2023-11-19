@@ -175,7 +175,7 @@ public class CharacterCreationMenu : MonoBehaviour
 
         
         // Create a new player character
-        Player player = new Player(characterName, 4.0f, 100, strengthValue, dexterityValue, constitutionValue, intelligenceValue, wisdomValue, charismaValue, null);
+        Player player = new Player(characterName, 4.0f, 60, strengthValue, dexterityValue, constitutionValue, intelligenceValue, wisdomValue, charismaValue, null);
         Debug.Log("Created character's name is " + player.getName());
         // Optionally, you can instantiate a player character or save the data to use later
     }

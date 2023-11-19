@@ -1,0 +1,70 @@
+<Events>
+    <Event>
+        <Name>News</Name>
+        <Type>Morning</Type>
+        <Des>It's a brand new day! What will you do this lovely morning?</Des>
+        <Choices>
+            <rollChoice>Watch the news</rollChoice>
+                <Des>You decided to watch the news. Apparently there are some interesting rumors about the new iPhone. Maybe it's time for an upgrade.....?</Des>
+                <DC>10</DC>
+                <Type>WIS</Type>
+                <Success>Maybe not. But you're excited to learn more about a future option!</Success>
+                    <Effects>
+                        <Effect>SAN</Effect>
+                            <Content>+5</Content>
+                    </Effects>
+                <Failure>You spent the whole morning googling about the rumor, which turns about to be some stupid rendering made by an art student.</Failure>
+                    <Effects>
+                        <Effect>SAN</Effect>
+                            <Content>-2</Content>
+                    </Effects>
+            <Choice>Preview the next chapter of the textbook for your next class</Choice>
+                <Des>You decided to read the textbook. Ganing a preliminary understading of the material.</Des>
+                <Effects>
+                    <Effect>MOD</Effect>
+                        <Content>previewed</Content>
+                </Effects>
+        </Choices>
+    </Event>
+    <Event>
+        <Name>Overslept</Name>
+        <Type>Morning</Type>
+        <Des>You've overslept! A quick glance at Wooble map says you still have a slight chance of make it to class in time!</Des>
+        <Choices>
+            <rollChoice>Try to make it</rollChoice>
+                <Des>You try to get ready and grab your stuff as quickly as you can, and runs out of the door.</Des>
+                <DC>15</DC>
+                <Type>DEX</Type>
+                <Success>Phew! You got in just before the professor did, and you didn't forget anything! But you didn't get to eat breakfast, and you're absolutely exhausted.</Success>
+                    <Effects>
+                        <Effect>SAN</Effect>
+                            <Content>-2</Content>
+                        <Effect>MOD</Effect>
+                            <Content>panting</Content>
+                    </Effects>
+                <Failure>You forgot your wallet and your phone, going back to get them means you're surely going to be marked tardy.</Failure>
+                    <Effects>
+                        <Effect>SAN</Effect>
+                            <Content>-5</Content>
+                        <Effect>MOD</Effect>
+                            <Content>tardy</Content>
+                    </Effects>
+                <rollChoice>Fuck it. I'll just tell the professor about the "traffic nightmare!"</rollChoice>
+                    <Des>You try to spin a tale to convince your professor to let your tardiness slide for this time.</Des>
+                    <DC>15</DC>
+                    <Type>CHA</Type>
+                    <Success>Your charming personality convinced your professor! Or he's just not paid enough to give a shit.</Success>
+                        <Effects>
+                            <Effect>mt</Effect>
+                                <Content>0</Content>
+                        </Effects>
+                    <Failure>Your professor didn't buy a word you said. Fuck. Will he remember that you just lied to him?</Failure>
+                        <Effects>
+                            <Effect>SAN</Effect>
+                                <Content>-10</Content>
+                            <Effect>MOD</Effect>
+                                <Content>tardy</Content>
+                        </Effects>
+        </Choices>
+    </Event>
+</Events>
